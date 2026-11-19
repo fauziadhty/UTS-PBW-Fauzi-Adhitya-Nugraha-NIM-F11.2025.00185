@@ -1,0 +1,204 @@
+
+
+*::after {
+  box-sizing: border-box;
+}
+
+:root,
+[data-bs-theme="light"] {
+  --laut-tua: #0a3d62;
+  --laut: #0e6ba8;
+  --laut-muda: #d6ebf5;
+  --tombol: #0e6ba8;
+  --tombol-hover: #0a3d62;
+  --di-atas-laut: #ffffff;
+  --permukaan: #ffffff;
+
+  --bs-body-bg: #eef6fa;
+  --bs-body-color: #0b2536;
+  --bs-border-color: #c4dcea;
+  --bs-link-color: #0e6ba8;
+  --bs-link-color-rgb: 14, 107, 168;
+  --bs-link-hover-color: #0a3d62;
+  --bs-link-hover-color-rgb: 10, 61, 98;
+}
+
+[data-bs-theme="dark"] {
+  --laut-tua: #0a3d62;
+  --laut: #4db3e6;
+  --laut-muda: #12384f;
+  --tombol: #0e6ba8;
+  --tombol-hover: #1a86c7;
+  --di-atas-laut: #071a26;
+  --permukaan: #0d2a3d;
+
+  --bs-body-bg: #071a26;
+  --bs-body-color: #e3f1f7;
+  --bs-border-color: #1d4660;
+  --bs-link-color: #6cc3ee;
+  --bs-link-color-rgb: 108, 195, 238;
+  --bs-link-hover-color: #a6dcf6;
+  --bs-link-hover-color-rgb: 166, 220, 246;
+}
+
+body {
+  transition: background-color 0.25s, color 0.25s;
+}
+
+
+.navbar-laut {
+  background-color: var(--laut-tua);
+}
+
+.btn-primary {
+  --bs-btn-color: #ffffff;
+  --bs-btn-bg: var(--tombol);
+  --bs-btn-border-color: var(--tombol);
+  --bs-btn-hover-color: #ffffff;
+  --bs-btn-hover-bg: var(--tombol-hover);
+  --bs-btn-hover-border-color: var(--tombol-hover);
+  --bs-btn-active-color: #ffffff;
+  --bs-btn-active-bg: var(--tombol-hover);
+  --bs-btn-active-border-color: var(--tombol-hover);
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--laut);
+  --bs-btn-border-color: var(--laut);
+  --bs-btn-hover-color: var(--di-atas-laut);
+  --bs-btn-hover-bg: var(--laut);
+  --bs-btn-hover-border-color: var(--laut);
+  --bs-btn-active-color: var(--di-atas-laut);
+  --bs-btn-active-bg: var(--laut);
+  --bs-btn-active-border-color: var(--laut);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 3.5rem 0 2.5rem;
+}
+
+.hero .foto {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  outline: 3px solid var(--laut);
+  outline-offset: 5px;
+}
+
+.sapaan {
+  color: var(--laut);
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.hero h1,
+.judul-halaman,
+.judul-bagian {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+
+.judul-halaman {
+  padding-top: 2.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.judul-bagian {
+  font-size: 1.5rem;
+}
+
+.judul-bagian::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  margin-top: 0.5rem;
+  background-color: var(--laut);
+  border-radius: 2px;
+}
+
+.card {
+  --bs-card-bg: var(--permukaan);
+  --bs-card-border-color: var(--bs-border-color);
+  transition: border-color 0.2s;
+}
+
+.card:hover {
+  border-color: var(--laut);
+}
+
+.card-img-top {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.panel {
+  background-color: var(--permukaan);
+  border: 1px solid var(--bs-border-color);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+}
+
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-border-color: var(--bs-border-color);
+}
+
+.table th {
+  width: 40%;
+  font-weight: 500;
+  color: var(--bs-secondary-color);
+}
+
+.list-group {
+  --bs-list-group-bg: transparent;
+  --bs-list-group-border-color: var(--bs-border-color);
+}
+
+.accordion {
+  --bs-accordion-bg: var(--permukaan);
+  --bs-accordion-border-color: var(--bs-border-color);
+  --bs-accordion-btn-bg: var(--permukaan);
+  --bs-accordion-active-bg: var(--laut-muda);
+  --bs-accordion-active-color: var(--bs-body-color);
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.2rem rgba(14, 107, 168, 0.25);
+}
+.footer-laut {
+  background-color: var(--laut-tua);
+  color: #ffffff;
+}
+
+.footer-isi {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+@media (max-width: 767.98px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.75rem;
+    padding: 2.5rem 0 2rem;
+  }
+
+  .tombol-hero {
+    justify-content: center;
+  }
+
+  .footer-isi {
+    flex-direction: column;
+    text-align: center;
+  }
+}

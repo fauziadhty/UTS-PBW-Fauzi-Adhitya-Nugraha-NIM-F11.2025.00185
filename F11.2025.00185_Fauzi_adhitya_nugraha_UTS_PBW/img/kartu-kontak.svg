@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Ilustrasi amplop surat">
+  <rect width="640" height="360" fill="#d6ebf5"/>
+  <rect x="180" y="105" width="280" height="170" rx="14" fill="#ffffff" stroke="#0a3d62" stroke-width="10"/>
+  <path d="M190 122 L320 215 L450 122" fill="none" stroke="#0e6ba8" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="470" cy="105" r="22" fill="#0e6ba8"/>
+  <path d="M0 330 Q80 305 160 330 T320 330 T480 330 T640 330 V360 H0 Z" fill="#0e6ba8" opacity="0.6"/>
+</svg>
